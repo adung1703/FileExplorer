@@ -35,10 +35,10 @@ class NextFolderFragment : Fragment() {
         val directory = File(address.toString())
         for (entry in directory.listFiles()) {
             if (entry.isDirectory) {
-                listFile.add(FileModel(R.drawable.folder, entry.name.toString(), entry.path))
+                listFile.add(FileModel(R.drawable.folder, entry.name.toString(), entry.path, "folder"))
             }
             if (entry.isFile) {
-                listFile.add(FileModel(R.drawable.file, entry.name.toString(), entry.path))
+                listFile.add(FileModel(R.drawable.file, entry.name.toString(), entry.path, "file"))
             }
         }
 
